@@ -81,7 +81,7 @@ html{
 
 /* Intro styles starts */
 .intro{
-    height: 100vh;
+    min-height: 100vh;
     background-image: url(../img/intro-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -95,6 +95,55 @@ html{
     color: white;
     max-width: 619px;
     margin-bottom: 22px;
+}
+.intro__subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:white;
+    max-width: 546px;
+    margin-bottom: 59px;
+}
+.search-form__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-form__field{
+    /* background-color: transparent;
+    background-image: url(../img/circle-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left center; */
+    width: 297px;
+    background: transparent url(../img/circle-icon.svg) no-repeat left 6px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid white;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    
+}
+.search-form__field::placeholder{
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.search-form__submit{
+    text-transform: uppercase;
+    padding: 15px 39px ;
+    background-color: #1B7DFF;
+    border:0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+}
+
+.search-form__submit:focus,.search-form__submit:active,.search-form__submit:hover{
+    background-color: #661bff;
 }
 
 
