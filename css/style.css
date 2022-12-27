@@ -37,6 +37,7 @@ html{
     color: #102746;
 }
 img{
+    vertical-align: top;
     max-width: 100%;
     height: auto;
 }
@@ -46,6 +47,27 @@ img{
 .wrapper{
     max-width: 1060px;
     margin: 0 auto;
+}
+.wrapper-full{
+    max-width: 1262px;
+    margin: 0 auto;
+}
+.section__title{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.section__title::after{
+    display: block;
+    content: "";
+    width: 253px;
+    height: 3px;
+    background-color: #006DFE;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 /* Header styles starts */
 .header{
@@ -181,7 +203,7 @@ img{
 .benefits__cards{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 55px;
+    column-gap: 55px;
     padding: 0 100px;
 }
 .benefits__card{
@@ -227,3 +249,235 @@ img{
 
 
 /* Benefits style end */
+
+
+/* Places style start */
+.places{
+    margin-bottom: 131px;
+}
+.places__caption{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 46px;
+}
+.places__title{
+    margin-right: 15px;
+}
+.places__view-all{
+    text-decoration: none;
+    font-size: 16px;
+    color: #006DFE;
+    display: inline-block;
+    padding-right: 59px;
+    background: url(/img/arrow.svg) no-repeat right center;
+}
+.places__view-all:hover,.places__view-all:focus{
+    opacity: .65;
+}
+.places__cards{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 10px;
+}
+.places__card{
+    position: relative;
+    overflow: hidden;
+
+}
+.places__card::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.places__card:hover .places__card-pic{
+    transform: scale(1.05);
+
+}
+.places__card-title{
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    bottom: 27px; 
+    left: 29px; 
+    z-index: 3;
+}
+.places__card_size-lg{
+    grid-column: span 3;
+    height: 354px;
+    
+}
+.places__card_size-sm{
+    margin-top: 10px;
+    grid-column: span 2;
+    height: 283px;
+}
+.places__card-pic{
+    width: 100%;
+    transition: .15s all;
+    
+}
+.places__card-pic_size_lg{
+    height: 354px;
+    object-fit: cover;
+}
+.places__card-pic_size_sm{
+    height: 283px;
+    object-fit: cover;
+}
+.places__card-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+/* Places style end */
+
+/* Tours style start */
+.tours{
+    margin-bottom: 139px;
+
+}
+.tours__tour{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap:  108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+.tour__info{
+    padding-left: 47px;
+}
+.tour__title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 85px;
+}
+
+.tour__desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+.tour__more{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006DFE;
+    display: inline-block;
+    padding-right: 59px;
+    background: url(/img/arrow.svg) no-repeat  95% center;
+    transition: .2s all;
+
+}
+.tour__more:hover,tour__more:focus{
+
+    /* opacity: .65; */
+
+    background: url(/img/arrow.svg) no-repeat right center;
+
+}
+/* Tours style end */
+
+
+/* Top places style start */
+.top{
+    margin-bottom: 86px;
+}
+.top__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 57px;
+}
+.top__card{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.top__title{
+    margin-bottom: 64px;
+}
+.top__card-pic{
+    position: relative;
+    margin-bottom: 45px;
+}
+.top__card-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+
+}
+
+.top__card-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    margin: 0 auto 0 0;
+    
+}
+.top__card-likes{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    padding-right: 20px;
+    background: url(/img/heart-icon.svg) no-repeat right;
+    margin-right: 14px;
+}
+
+.top__card-comments{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    padding-right: 23px;
+    background: url(/img/comment-icon.svg) no-repeat right center;
+}
+.top__card-desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 43px;
+}
+.top__card-more{
+    width: 118px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    background-color: #006DFE;
+    padding: 12px 19px ;
+    margin: auto 0 0 0 ;
+  
+
+}
+
+.top__card-more:hover,.top__card-more:active,.top__card-more:focus{
+    background-color:#661bff ;
+}
+
+/* Top places style end */
+
